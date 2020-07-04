@@ -10,12 +10,10 @@
       </tr>
     </thead>
     <tbody>
-      @foreach($items as $item)
         <tr>
-          <td>{{$item->id}}</td>
-          <td>{{$item->isi}}</td>
+          <td>{{$items->id}}</td>
+          <td>{{$items->isi}}</td>
         </tr>
-        @endforeach
     </tbody>
   </table>
 </div>

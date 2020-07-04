@@ -18,8 +18,13 @@ Route::get('/',function(){
 Route::get('/pertanyaan','PertanyaanController@index');
 Route::post('/pertanyaan','PertanyaanController@store');
 Route::get('/pertanyaan/create','PertanyaanController@create');
-
+Route::get('/pertanyaan/{id}','PertanyaanController@show');
+Route::get('/pertanyaan/{id}/edit','PertanyaanController@edit');
+Route::put('/pertanyaan/{id}','PertanyaanController@update');
+Route::delete('/pertanyaan/{id}','PertanyaanController@destroy');
 
 Route::post('/jawaban/{pertanyaan_id}','JawabanController@store');
-
 Route::get('/jawaban/{pertanyaan_id}','JawabanController@index');
+Route::get('/jawaban/{pertanyaan_id}','JawabanController@show');
+Route::delete('/jawaban/{pertanyaan_id}','JawabanController@destroy');
+

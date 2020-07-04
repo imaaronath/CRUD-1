@@ -16,7 +16,7 @@ class CreateJawabanTable extends Migration
         Schema::create('jawaban', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('isi');
-            $table->foreignId('pertanyaan_id')->constrained('pertanyaan');
+            $table->foreignId('pertanyaan_id')->constrained('pertanyaan')->onDelete('cascade');;
             $table->timestamps();
         });
     }

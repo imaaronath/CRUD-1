@@ -30,11 +30,6 @@
                 <p>
                 Membuat Form Pertanyaan
                 </p>
-            <a href="/jawaban/{pertanyaan_id}" class="nav-link">
-                <i class="nav-icon fas fa-table"></i>
-                <p>
-                Membuat Form Jawaban
-                </p>
             <a href="/pertanyaan" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>

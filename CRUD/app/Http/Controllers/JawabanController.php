@@ -20,4 +20,16 @@ class JawabanController extends Controller
         Jawaban::save($request->all());
         return redirect('/jawaban');
     }
+    public function show($pertanyaan_id)
+    {
+        $items = Jawaban::find_by_id($pertanyaan_id);
+        return view('items.jawaban')->with([
+            'items' => $items
+        ]);
+    }
+    public function destroy($pertanyaan_id)
+    {
+        $deleted = Jawaban::destroy($pertanyaan_id);
+        return redirect('/pertanyaan');
+    }
 }
